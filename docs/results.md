@@ -51,7 +51,7 @@ Two findings from this task shaped everything after it. Carrying the neural stat
 
 ## The original steering-wheel pilot
 
-Before any of this we reproduced flyhard's own pilot on a Mac mini: the connectome holding a requested steering-wheel angle through a simulated foreleg. 0 of 100 held-out targets before training, 100 of 100 after, same 25,728,319 trainable parameters, graph hash identical to the published one, worst hold error 4.41° against the published 4.85°. That demo is instructed steering, not driving: the policy has no camera input and the turn requests are scripted, as its author states. The scripts are in `flyhard-patches/scripts`.
+Before any of this we reproduced flyhard's own pilot: the connectome holding a requested steering-wheel angle through a simulated foreleg. 0 of 100 held-out targets before training, 100 of 100 after, same 25,728,319 trainable parameters, graph hash identical to the published one, worst hold error 4.41° against the published 4.85°. That demo is instructed steering, not driving: the policy has no camera input and the turn requests are scripted, as its author states. The scripts are in `flyhard-patches/scripts`.
 
 ## Caveats
 

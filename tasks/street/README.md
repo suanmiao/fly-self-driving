@@ -22,7 +22,7 @@ Graph data is not in this repository: build `flyhard/data/graph-traced-v1` (grap
 ## Run commands
 
 ```
-# connectome, task v5, the current best recipe (about 97 min on an M4, 35 min on an H100 alone)
+# connectome, task v5, the current best recipe (about 35 min on an H100)
 python train_street.py --model connectome --graph-mode measured --demo-steps 320 --overtake-weight 3 \
     --window 8 --batch 4 --steps 1200 --lr 0.04 --out runs/street-v5-measured-stateful
 # DAgger continuation from a checkpoint (on-policy relabelling, 3 rounds x 600 steps)

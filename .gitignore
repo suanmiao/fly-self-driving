@@ -8,7 +8,7 @@ episodes/
 *.zip
 *.mp4
 *.png
-*.jpg
+
 render/assets/
 render/*/frames/
 render/*/composite/
@@ -17,3 +17,6 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+
+# README media is tracked
+!docs/media/*

@@ -6,7 +6,7 @@ The first driving task: a curving flat road with static obstacles, a 48 × 24 ra
 | --- | --- |
 | `drive_env.py` | Road, car, ray-cast renderer, obstacle-aware pure-pursuit expert, closed-loop `rollout`. `FLY_TASK_VERSION=1` reproduces the first renderer (obstacles as ground discs a 24-row image cannot resolve beyond ~8 m); the default v2 raycasts upright cylinders. |
 | `train_vision.py` | Connectome trainer: noise-injected demonstrations, frozen random pixel → `ol_sensory` map and `vnc_motor` → steering readout, `--graph-mode shuffled` for the rewired control. As shipped it resets the state every decision, the flyhard way; the state-carried variant used for the street task lives in `../street`. |
-| `train_vision_mps.py` | Same trainer with the Apple-GPU drop-in installed first. |
+| `train_vision_mps.py` | Same trainer with the Apple-silicon GPU (MPS) drop-in installed first. |
 | `eval_batched.py` | Steps all 20 held-out roads in lockstep with one batched forward pass per tick; matches the serial evaluator and is ~20× faster. |
 | `mlp_baseline.py` | The linear / small-MLP / parameter-matched-MLP baselines on the identical protocol (`demonstrations()` and `evaluate()` imported unchanged from the trainer). |
 | `render_drive.py` | The simple top-down / driver's-eye video for this task. |

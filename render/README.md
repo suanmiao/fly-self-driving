@@ -10,9 +10,9 @@ Rebuilds a recorded episode as a cinematic video without touching the brain's in
 | File | What it does |
 | --- | --- |
 | `adapt_episode.py` | Converts a `record_episode.py` log (`ep-<seed>.json` + `.npz`) into the replay schema and extracts the recorded driver's-eye frames. |
-| `build_scene.py` | Runs inside Blender (`blender -b -noaudio --python build_scene.py -- --log episode.json --out frames`). Builds the road ribbon with lane markings, curbs and sidewalks, places Kenney buildings on the recorded footprints, lamp posts, trees, parked and moving cars, pedestrians (Kenney mini-characters) and a procedural dog, animates the fly on the logged poses with a chase camera, and renders with EEVEE. About 1.5–3 s per 720p frame on an M4. |
+| `build_scene.py` | Runs inside Blender (`blender -b -noaudio --python build_scene.py -- --log episode.json --out frames`). Builds the road ribbon with lane markings, curbs and sidewalks, places Kenney buildings on the recorded footprints, lamp posts, trees, parked and moving cars, pedestrians (Kenney mini-characters) and a procedural dog, animates the fly on the logged poses with a chase camera, and renders with EEVEE. About 1.5–3 s per 720p frame on a laptop-class GPU. |
 | `fly_model.py` | The procedural fly: thorax, banded abdomen, red faceted compound eyes, six legs, halteres, wings keyed per frame. |
 | `brain_panel.py` | Composites the frames with the inset, telemetry strip and the glowing connectome panel into a 1920 × 1080 mp4 with ffmpeg. |
 | `synth_episode.py` | Writes a synthetic episode in the replay schema, for testing the renderer without a trained model. |
 
-Blender 4.2+ (5.2 tested), ffmpeg, Pillow and numpy. Only one GPU job at a time on a Mac if a PyTorch MPS training is running on the same machine.
+Blender 4.2+ (5.2 tested), ffmpeg, Pillow and numpy. On Apple silicon, run only one GPU job at a time; a PyTorch MPS training and a Blender render on the same GPU stall each other.
