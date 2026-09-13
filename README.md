@@ -3,8 +3,8 @@
 **A fruit fly's brain, driving a street.** The measured wiring diagram of a fruit fly, 165,122 neurons and 25,563,197 synapses from the [MaleCNS](https://male-cns.janelia.org/download/) connectome, run as a recurrent network and trained to steer from a 64 × 32 pixel windscreen. On streets it never trained on, with parked cars, oncoming traffic and a slow car to overtake, it completes **58 of 60** across three independent sets, with no collisions with any car.
 
 <p align="center">
-  <a href="https://fly-brain-drives.kylon.app"><img src="docs/media/demo.gif" alt="The fly connectome overtaking a slow car through oncoming traffic on a held-out street, with the 64 by 32 frame it sees and its neural activity beside it" width="800"></a><br>
-  <sub>Held-out street 9000. Left: the replay. Top right: what the brain actually sees. Right: all 140,024 positioned neurons, each lit by its own recorded activity. <a href="https://fly-brain-drives.kylon.app">Watch the full drive</a>.</sub>
+  <a href="https://fly-self-driving.kylon.app"><img src="docs/media/demo.gif" alt="The fly connectome overtaking a slow car through oncoming traffic on a held-out street, with the 64 by 32 frame it sees and its neural activity beside it" width="800"></a><br>
+  <sub>Held-out street 9000. Left: the replay. Top right: what the brain actually sees. Right: all 140,024 positioned neurons, each lit by its own recorded activity. <a href="https://fly-self-driving.kylon.app">Watch the full drive</a>.</sub>
 </p>
 
 Everything in the video is replayed from recorded state: the fly and every car follow their logged positions, the inset is the real input, and the brain panel is the real activity. The failures are on the site too.
@@ -20,7 +20,7 @@ Everything in the video is replayed from recorded state: the fly and every car f
 - **Engineered and frozen:** a random map from pixels onto the 4,114 optic-lobe sensory neurons, a random readout from the 708 ventral-cord motor neurons to the steering angle, the car, and the street. Nothing engineered can carry the signal on its own.
 - **State carried.** Four graph updates per 50 ms decision, and the network is never reset between decisions. The original recipe wipes the state every decision; a real fly never resets. This one change took the same graph from 3 of 20 roads to 17 of 20 on the first task.
 
-Full description: [docs/method.md](docs/method.md). Interactive version: [How does it work](https://fly-brain-drives.kylon.app/how-it-works).
+Full description: [docs/method.md](docs/method.md). Interactive version: [How does it work](https://fly-self-driving.kylon.app/how-it-works).
 
 ## Training recipe
 
@@ -35,7 +35,7 @@ Imitation first, then its own mistakes. A pure-pursuit expert that reads the tru
 | **Fly connectome + DAgger ×3, window 16** | **20 · 19 · 19 / 20** | 20 · 20 · 19 |
 | Same recipe, randomly rewired graph | 16 / 20 | 18 / 20 |
 
-The data recipe, every hyperparameter, the speed-control task with pedestrians and dogs, and the caveats (the fly does not brake yet; one training seed per condition) are in [docs/method.md](docs/method.md) and [docs/results.md](docs/results.md), and on the site under [Training recipe](https://fly-brain-drives.kylon.app/training-recipe).
+The data recipe, every hyperparameter, the speed-control task with pedestrians and dogs, and the caveats (the fly does not brake yet; one training seed per condition) are in [docs/method.md](docs/method.md) and [docs/results.md](docs/results.md), and on the site under [Training recipe](https://fly-self-driving.kylon.app/training-recipe).
 
 ## Train your own
 
@@ -80,7 +80,7 @@ The scripts find the flyhard checkout as a sibling of this repository, or wherev
 | `results/` | Metrics from every run reported on the site, plus two recorded episodes of the best model as examples of the state-log format. |
 | `docs/` | [Method](docs/method.md) and [results with controls and caveats](docs/results.md). |
 
-Not included: the connectome data (about 1 GB, fetched by flyhard's scripts), trained checkpoints (about 600 MB each), Kenney assets (`render/fetch_assets.sh`), and the rendered videos (on the [site](https://fly-brain-drives.kylon.app)).
+Not included: the connectome data (about 1 GB, fetched by flyhard's scripts), trained checkpoints (about 600 MB each), Kenney assets (`render/fetch_assets.sh`), and the rendered videos (on the [site](https://fly-self-driving.kylon.app)).
 
 ## Credits
 
