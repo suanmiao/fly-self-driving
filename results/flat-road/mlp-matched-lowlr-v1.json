@@ -1,0 +1,1102 @@
+{
+  "config": {
+    "out": "runs/mlp-matched-lowlr",
+    "tiers": {
+      "linear": {
+        "hidden": 0,
+        "layers": 0
+      },
+      "small": {
+        "hidden": 40,
+        "layers": 1
+      },
+      "matched": {
+        "hidden": 4528,
+        "layers": 2
+      }
+    },
+    "lrs": "0.0001,0.00003",
+    "seeds": "0,1,2",
+    "steps": 1200,
+    "batch": 16,
+    "demo_roads": 60,
+    "demo_steps": 300,
+    "eval_roads": [
+      9000,
+      9019
+    ],
+    "eval_steps": 500,
+    "noise": 0.06,
+    "device": "mps",
+    "train_roads": [
+      1000,
+      1059
+    ],
+    "protocol": "demonstrations() and evaluate() imported from train_vision.py unchanged"
+  },
+  "expert_reference": {
+    "completed": 20,
+    "episodes": 20,
+    "mean_distance_m": 203.10473284750447,
+    "mean_abs_lateral_m": 0.2363343234226491
+  },
+  "straight_reference": {
+    "completed": 0,
+    "episodes": 20,
+    "mean_distance_m": 49.83650199404093,
+    "mean_abs_lateral_m": 1.1376344946746737
+  },
+  "runs": [
+    {
+      "tier": "matched",
+      "lr": 0.0001,
+      "seed": 0,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.025143884122371674,
+      "last_loss": 1.0012739646434783,
+      "training_seconds": 74.33377899974585,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4202034043383238,
+        "mean_distance_m": 19.111410626984885
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5150610770846713,
+        "mean_distance_m": 10.0606097241174
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5150608687232778,
+        "mean_distance_m": 10.060611303928138
+      },
+      "trained_per_episode": [
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4497139399553616,
+          "max_abs_lateral": 3.6527229059492266,
+          "distance_m": 10.239048252905999
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4810301901253733,
+          "max_abs_lateral": 3.596779819294478,
+          "distance_m": 9.369412003520964
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2516634424311799,
+          "max_abs_lateral": 3.5103635324613673,
+          "distance_m": 10.46332912028405
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.7645225415825427,
+          "max_abs_lateral": 3.539434239347701,
+          "distance_m": 10.419847879137834
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4493720248665325,
+          "max_abs_lateral": 3.801466440575607,
+          "distance_m": 10.167648563609166
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 2.0618066503544803,
+          "max_abs_lateral": 3.818348420049807,
+          "distance_m": 8.799460887438457
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3430566231101502,
+          "max_abs_lateral": 3.65366166532747,
+          "distance_m": 9.523602383348608
+        },
+        {
+          "steps": 19,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3600374318870765,
+          "max_abs_lateral": 3.7805261140589494,
+          "distance_m": 9.969665644375608
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.7092949773853143,
+          "max_abs_lateral": 3.8212853943574556,
+          "distance_m": 9.96109946439279
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2610940755302071,
+          "max_abs_lateral": 3.622590210166253,
+          "distance_m": 9.69841636000969
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.5083491890346492,
+          "max_abs_lateral": 3.6532114897502845,
+          "distance_m": 10.540633958828444
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.698362437453792,
+          "max_abs_lateral": 3.7557675176272736,
+          "distance_m": 9.825458708264176
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.6954818385277752,
+          "max_abs_lateral": 3.6572178149429324,
+          "distance_m": 9.936114310270105
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.6146738907753715,
+          "max_abs_lateral": 3.7708897588254233,
+          "distance_m": 10.13004614770825
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.246020436489856,
+          "max_abs_lateral": 3.527993259017772,
+          "distance_m": 10.295767652201606
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3179564890347304,
+          "max_abs_lateral": 3.7233480847329035,
+          "distance_m": 10.42638614026529
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.461989528864358,
+          "max_abs_lateral": 3.674430385633872,
+          "distance_m": 10.034009817140694
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 2.051390788043287,
+          "max_abs_lateral": 3.7359720599317816,
+          "distance_m": 9.48132295417697
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2834132321579845,
+          "max_abs_lateral": 3.624804033823854,
+          "distance_m": 10.800461264376137
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2919918140834068,
+          "max_abs_lateral": 3.637241237041194,
+          "distance_m": 11.13046297009319
+        }
+      ]
+    },
+    {
+      "tier": "matched",
+      "lr": 0.0001,
+      "seed": 1,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.07248937338590622,
+      "last_loss": 1.0010053718090057,
+      "training_seconds": 73.52762562502176,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4703200589804268,
+        "mean_distance_m": 17.095343329891225
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5090762910810325,
+        "mean_distance_m": 10.033782683177776
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5090760730078023,
+        "mean_distance_m": 10.033784097760218
+      },
+      "trained_per_episode": [
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4506276970017473,
+          "max_abs_lateral": 3.6598250360114233,
+          "distance_m": 10.226679901365783
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4810585669010847,
+          "max_abs_lateral": 3.5969995702744715,
+          "distance_m": 9.36901029425921
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2531358548917941,
+          "max_abs_lateral": 3.5237802514897916,
+          "distance_m": 10.43416007350761
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.7679021995976278,
+          "max_abs_lateral": 3.569434200321663,
+          "distance_m": 10.386283563757589
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4493802489363152,
+          "max_abs_lateral": 3.8015255420437004,
+          "distance_m": 10.167545101973642
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 2.062195952204437,
+          "max_abs_lateral": 3.8209908818480116,
+          "distance_m": 8.79537678930565
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3466785369062693,
+          "max_abs_lateral": 3.684282729362213,
+          "distance_m": 9.460825060763636
+        },
+        {
+          "steps": 19,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3602203207126606,
+          "max_abs_lateral": 3.782011729369828,
+          "distance_m": 9.965775965515402
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.5700471552680058,
+          "max_abs_lateral": 3.511971986118241,
+          "distance_m": 9.704780030058814
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.262789970838777,
+          "max_abs_lateral": 3.6376463440894913,
+          "distance_m": 9.66524938423312
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.5086299083128862,
+          "max_abs_lateral": 3.6553868081061376,
+          "distance_m": 10.537333396751501
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.6987852398656793,
+          "max_abs_lateral": 3.7590547573787094,
+          "distance_m": 9.820099798350077
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.6955787849201576,
+          "max_abs_lateral": 3.657921880615077,
+          "distance_m": 9.935069749523057
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.6200654183515826,
+          "max_abs_lateral": 3.814063285758604,
+          "distance_m": 10.062931003707005
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2462141522689572,
+          "max_abs_lateral": 3.5295836565218233,
+          "distance_m": 10.2925024811883
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3179896880010955,
+          "max_abs_lateral": 3.723601040529152,
+          "distance_m": 10.425842306378478
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.4633692263918874,
+          "max_abs_lateral": 3.685205093682144,
+          "distance_m": 10.014480353320119
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 2.0514522937136377,
+          "max_abs_lateral": 3.7363900324696235,
+          "distance_m": 9.4807787132228
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2834134282451002,
+          "max_abs_lateral": 3.624805530718387,
+          "distance_m": 10.80045844614183
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2919911782909446,
+          "max_abs_lateral": 3.637236386396773,
+          "distance_m": 11.130471250231905
+        }
+      ]
+    },
+    {
+      "tier": "matched",
+      "lr": 0.0001,
+      "seed": 2,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.010411163792014122,
+      "last_loss": 1.001176756620407,
+      "training_seconds": 73.52694491669536,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4605048531919853,
+        "mean_distance_m": 41.29383615587936
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5010597245916035,
+        "mean_distance_m": 9.762475574030812
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 0,
+        "off_road": 20,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.5010597245916035,
+        "mean_distance_m": 9.762475574030812
+      },
+      "trained_per_episode": [
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3875322268417987,
+          "max_abs_lateral": 3.7199774574585875,
+          "distance_m": 9.563903018053105
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3950398510087736,
+          "max_abs_lateral": 3.756201079509576,
+          "distance_m": 10.54628443766007
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.8069347382301046,
+          "max_abs_lateral": 3.53199475596575,
+          "distance_m": 9.301831606982985
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3957823587731395,
+          "max_abs_lateral": 3.8322050471294262,
+          "distance_m": 8.814659036023945
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3847753644118548,
+          "max_abs_lateral": 3.550066347809533,
+          "distance_m": 9.794900098461172
+        },
+        {
+          "steps": 19,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2801635790627162,
+          "max_abs_lateral": 3.5573781205450663,
+          "distance_m": 11.153344807915659
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.567398763381732,
+          "max_abs_lateral": 3.7050858128716695,
+          "distance_m": 10.289727520646714
+        },
+        {
+          "steps": 14,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.928621528169792,
+          "max_abs_lateral": 3.6389838963229475,
+          "distance_m": 9.689121386822611
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2435259041076163,
+          "max_abs_lateral": 3.518799196971841,
+          "distance_m": 9.995315193000964
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.693081274236806,
+          "max_abs_lateral": 3.7288558978515565,
+          "distance_m": 10.007129033419362
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3689771597106233,
+          "max_abs_lateral": 3.6938272381015063,
+          "distance_m": 9.094759215867441
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2995461420922698,
+          "max_abs_lateral": 3.5884717588406914,
+          "distance_m": 10.144370355716053
+        },
+        {
+          "steps": 18,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3113911713770063,
+          "max_abs_lateral": 3.7065577227169446,
+          "distance_m": 9.870313575931966
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.2651457255306888,
+          "max_abs_lateral": 3.567222945445598,
+          "distance_m": 9.796427771364579
+        },
+        {
+          "steps": 16,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.665638393160226,
+          "max_abs_lateral": 3.8307206948614665,
+          "distance_m": 9.63000225368016
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.7382510291698587,
+          "max_abs_lateral": 3.656075052861336,
+          "distance_m": 9.525965469998487
+        },
+        {
+          "steps": 17,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3724983258596892,
+          "max_abs_lateral": 3.698978412311066,
+          "distance_m": 9.836404926159972
+        },
+        {
+          "steps": 19,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.3392461529235289,
+          "max_abs_lateral": 3.6771617185019925,
+          "distance_m": 10.35604865028306
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.792935053199207,
+          "max_abs_lateral": 3.7422487057966913,
+          "distance_m": 9.146251150720554
+        },
+        {
+          "steps": 15,
+          "failure": "off_road",
+          "mean_abs_lateral": 1.7847097505846392,
+          "max_abs_lateral": 3.727876157994901,
+          "distance_m": 8.692751971907372
+        }
+      ]
+    },
+    {
+      "tier": "matched",
+      "lr": 3e-05,
+      "seed": 0,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.025143884122371674,
+      "last_loss": 0.0020498627290362493,
+      "training_seconds": 73.68791595939547,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4202034043383238,
+        "mean_distance_m": 19.111410626984885
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 14,
+        "off_road": 0,
+        "obstacle_hits": 6,
+        "mean_abs_lateral_m": 0.3931230002803693,
+        "mean_distance_m": 175.92554679764808
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 20,
+        "off_road": 0,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 0.3762741885116823,
+        "mean_distance_m": 203.19277614350827
+      },
+      "trained_per_episode": [
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.1948527826088328,
+          "max_abs_lateral": 0.6241637061387801,
+          "distance_m": 204.39742764332559
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28647029232186194,
+          "max_abs_lateral": 0.7878269597752979,
+          "distance_m": 202.02145369890988
+        },
+        {
+          "steps": 212,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.36440068542449855,
+          "max_abs_lateral": 0.7457132857801784,
+          "distance_m": 89.42790038490496
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.410297869956794,
+          "max_abs_lateral": 0.71913500217887,
+          "distance_m": 199.4605856607415
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.4394372416424853,
+          "max_abs_lateral": 0.918106504255953,
+          "distance_m": 203.14197544730092
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3947320492919786,
+          "max_abs_lateral": 0.9264253827439538,
+          "distance_m": 203.1676566855494
+        },
+        {
+          "steps": 103,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.4386939078747198,
+          "max_abs_lateral": 0.6953385694912864,
+          "distance_m": 45.16255401983924
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.5024297294701189,
+          "max_abs_lateral": 0.864714807889967,
+          "distance_m": 203.63174194499675
+        },
+        {
+          "steps": 439,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.29331395053782616,
+          "max_abs_lateral": 0.6984274879155695,
+          "distance_m": 179.9968297716139
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.5351232806386678,
+          "max_abs_lateral": 0.7439178502351017,
+          "distance_m": 203.3209038113368
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2567465471070114,
+          "max_abs_lateral": 0.6988956321451582,
+          "distance_m": 203.06657598301888
+        },
+        {
+          "steps": 90,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.4264070855410739,
+          "max_abs_lateral": 0.7193411210939241,
+          "distance_m": 40.6879697247074
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.19695665115895422,
+          "max_abs_lateral": 0.5136968367457072,
+          "distance_m": 203.9135143404779
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3715428043766991,
+          "max_abs_lateral": 0.81489586116943,
+          "distance_m": 201.44253058112398
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.40954562534376343,
+          "max_abs_lateral": 0.8499262082143174,
+          "distance_m": 203.38703072254035
+        },
+        {
+          "steps": 328,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.46516087229979947,
+          "max_abs_lateral": 0.8026097045378152,
+          "distance_m": 134.38224115706657
+        },
+        {
+          "steps": 456,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.40216488774606624,
+          "max_abs_lateral": 0.7261052701833149,
+          "distance_m": 186.69487965187153
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.4875906788350262,
+          "max_abs_lateral": 0.9901566726738541,
+          "distance_m": 204.89265174199863
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.5127787132466008,
+          "max_abs_lateral": 0.8669122990606478,
+          "distance_m": 204.2686095333542
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.47381435018460805,
+          "max_abs_lateral": 0.8131925285302022,
+          "distance_m": 202.0459034482832
+        }
+      ]
+    },
+    {
+      "tier": "matched",
+      "lr": 3e-05,
+      "seed": 1,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.07248937338590622,
+      "last_loss": 0.003102361757773906,
+      "training_seconds": 73.8073455421254,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4703200589804268,
+        "mean_distance_m": 17.095343329891225
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 18,
+        "off_road": 0,
+        "obstacle_hits": 2,
+        "mean_abs_lateral_m": 0.29853260609871424,
+        "mean_distance_m": 190.00619745750208
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 20,
+        "off_road": 0,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 0.3198655061418426,
+        "mean_distance_m": 203.20112573987117
+      },
+      "trained_per_episode": [
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28474622791916887,
+          "max_abs_lateral": 0.40001211739186515,
+          "distance_m": 204.47678679865436
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.23562676696005044,
+          "max_abs_lateral": 0.4528789073582041,
+          "distance_m": 202.1879527724218
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2919509387785265,
+          "max_abs_lateral": 0.7387214248566624,
+          "distance_m": 202.83728085599256
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.31087516932702647,
+          "max_abs_lateral": 0.7197680565126006,
+          "distance_m": 199.9925982791341
+        },
+        {
+          "steps": 108,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.1881073978908688,
+          "max_abs_lateral": 0.2976306829240018,
+          "distance_m": 47.884332688306294
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3156793503527778,
+          "max_abs_lateral": 1.0049255461975324,
+          "distance_m": 203.4754175562212
+        },
+        {
+          "steps": 226,
+          "failure": "obstacle",
+          "mean_abs_lateral": 0.2994435311141218,
+          "max_abs_lateral": 0.47177331558398966,
+          "distance_m": 93.9185182051437
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.33973999818734824,
+          "max_abs_lateral": 0.8656892598157825,
+          "distance_m": 203.7396775595474
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.31617974402567384,
+          "max_abs_lateral": 0.4530235658724546,
+          "distance_m": 204.0589384626325
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3081105144146289,
+          "max_abs_lateral": 0.525709532621253,
+          "distance_m": 203.38262786467953
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28886208190825824,
+          "max_abs_lateral": 0.4678299221104219,
+          "distance_m": 203.42679633779792
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.39431023565713347,
+          "max_abs_lateral": 0.9523232643665214,
+          "distance_m": 202.69669965966597
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2980517192894847,
+          "max_abs_lateral": 0.47758343123357067,
+          "distance_m": 203.90430150724458
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3378136898933515,
+          "max_abs_lateral": 0.5556070866657986,
+          "distance_m": 201.85375935204655
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.26885547143762595,
+          "max_abs_lateral": 0.40910782938392626,
+          "distance_m": 203.46257510943556
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.32922786155889033,
+          "max_abs_lateral": 0.5428335668700485,
+          "distance_m": 202.9119750529954
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.32911526646561884,
+          "max_abs_lateral": 0.5330358592092983,
+          "distance_m": 204.44529709790908
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2517566218403235,
+          "max_abs_lateral": 0.9927273334218921,
+          "distance_m": 204.953177146659
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28267790515078145,
+          "max_abs_lateral": 0.5600072686631514,
+          "distance_m": 204.32379172954572
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.29952162980262503,
+          "max_abs_lateral": 0.564438519858083,
+          "distance_m": 202.1914451140078
+        }
+      ]
+    },
+    {
+      "tier": "matched",
+      "lr": 3e-05,
+      "seed": 2,
+      "trainable_parameters": 25732625,
+      "first_loss": 0.010411163792014122,
+      "last_loss": 0.0015205430606147275,
+      "training_seconds": 73.73774400074035,
+      "untrained": {
+        "episodes": 10,
+        "completed": 0,
+        "off_road": 10,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 1.4605048531919853,
+        "mean_distance_m": 41.29383615587936
+      },
+      "trained": {
+        "episodes": 20,
+        "completed": 20,
+        "off_road": 0,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 0.22992649356869763,
+        "mean_distance_m": 203.07220187270315
+      },
+      "trained_no_obstacles": {
+        "episodes": 20,
+        "completed": 20,
+        "off_road": 0,
+        "obstacle_hits": 0,
+        "mean_abs_lateral_m": 0.1891183842151523,
+        "mean_distance_m": 203.18939397658283
+      },
+      "trained_per_episode": [
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.12135131369630534,
+          "max_abs_lateral": 0.35653873435840233,
+          "distance_m": 204.4085823777645
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.19774541923305716,
+          "max_abs_lateral": 0.4948127889013157,
+          "distance_m": 202.21956385741538
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.21883599550183025,
+          "max_abs_lateral": 0.736749284016757,
+          "distance_m": 202.61894742543734
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28592210783522315,
+          "max_abs_lateral": 0.8143700915659579,
+          "distance_m": 199.36986551402202
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3501257680944113,
+          "max_abs_lateral": 0.7638697044177533,
+          "distance_m": 203.22344477956614
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.15384024704650312,
+          "max_abs_lateral": 0.9187291982296963,
+          "distance_m": 203.44011004378743
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.20856773155799152,
+          "max_abs_lateral": 0.7351116532003836,
+          "distance_m": 202.12118533482848
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.30093165687184953,
+          "max_abs_lateral": 0.8643146130455576,
+          "distance_m": 203.6784383281544
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.11964082258817514,
+          "max_abs_lateral": 0.35407577806377066,
+          "distance_m": 204.03582463387602
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2512604571173878,
+          "max_abs_lateral": 0.6408991181370292,
+          "distance_m": 203.42237156985325
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.21866622120510384,
+          "max_abs_lateral": 0.7202214547617677,
+          "distance_m": 203.111144699292
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.24639159035831387,
+          "max_abs_lateral": 0.7563397177123505,
+          "distance_m": 202.71643992608853
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.1425268966404286,
+          "max_abs_lateral": 0.4486162650757476,
+          "distance_m": 203.86930189473114
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.26071759892899343,
+          "max_abs_lateral": 0.7571342186469172,
+          "distance_m": 201.47500598227856
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2869465732152306,
+          "max_abs_lateral": 0.8050967157482005,
+          "distance_m": 203.3449537575256
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.3089005278978026,
+          "max_abs_lateral": 0.7065308525905877,
+          "distance_m": 202.6192989815079
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.19393949720885645,
+          "max_abs_lateral": 0.5207334423526948,
+          "distance_m": 204.33698585594433
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.28118914003632356,
+          "max_abs_lateral": 0.9887983430404026,
+          "distance_m": 204.8999890478982
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.2574510075711922,
+          "max_abs_lateral": 0.5639737947325405,
+          "distance_m": 204.25491870243707
+        },
+        {
+          "steps": 500,
+          "failure": null,
+          "mean_abs_lateral": 0.19357929876897303,
+          "max_abs_lateral": 0.5643537189028305,
+          "distance_m": 202.27766474165432
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 573.079698082991
+}

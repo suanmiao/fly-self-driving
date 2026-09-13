@@ -1,0 +1,184 @@
+{
+  "checkpoint": "../vision/runs/conn-v1-lr0.1/checkpoint.pt",
+  "graph_mode": "measured",
+  "task_version_at_eval": 1,
+  "task_version_at_train": 1,
+  "with_obstacles": {
+    "episodes": 20,
+    "completed": 6,
+    "off_road": 2,
+    "obstacle_hits": 12,
+    "mean_abs_lateral_m": 0.5736924725943754,
+    "mean_distance_m": 128.92601178322946
+  },
+  "no_obstacles": {
+    "episodes": 20,
+    "completed": 16,
+    "off_road": 4,
+    "obstacle_hits": 0,
+    "mean_abs_lateral_m": 0.6801602682341699,
+    "mean_distance_m": 181.78797590394572
+  },
+  "per_episode_with_obstacles": [
+    {
+      "seed": 9000,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.2683379037162775,
+      "max_abs_lateral": 0.7360855920859937,
+      "distance_m": 204.2646663820948
+    },
+    {
+      "seed": 9001,
+      "steps": 87,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.3346274723945513,
+      "max_abs_lateral": 0.5463983573001286,
+      "distance_m": 39.196584414723034
+    },
+    {
+      "seed": 9002,
+      "steps": 211,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.6860244476874617,
+      "max_abs_lateral": 1.5093598472211491,
+      "distance_m": 88.9038265784274
+    },
+    {
+      "seed": 9003,
+      "steps": 81,
+      "failure": "off_road",
+      "mean_abs_lateral": 1.2935714418807356,
+      "max_abs_lateral": 3.515038050851922,
+      "distance_m": 36.729132839179414
+    },
+    {
+      "seed": 9004,
+      "steps": 461,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.4539252958959042,
+      "max_abs_lateral": 0.9467816037676969,
+      "distance_m": 187.31122135965063
+    },
+    {
+      "seed": 9005,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.508986188977729,
+      "max_abs_lateral": 1.010090005574271,
+      "distance_m": 202.9765185656857
+    },
+    {
+      "seed": 9006,
+      "steps": 103,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.457017086024753,
+      "max_abs_lateral": 0.7039592971613324,
+      "distance_m": 45.169340929623246
+    },
+    {
+      "seed": 9007,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.5112919213177458,
+      "max_abs_lateral": 1.3350408095743227,
+      "distance_m": 203.35144277534184
+    },
+    {
+      "seed": 9008,
+      "steps": 439,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.4194028061688395,
+      "max_abs_lateral": 0.8482434518985035,
+      "distance_m": 179.79459317179706
+    },
+    {
+      "seed": 9009,
+      "steps": 183,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.6841130633956424,
+      "max_abs_lateral": 1.292585963774427,
+      "distance_m": 77.14890996133362
+    },
+    {
+      "seed": 9010,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.41576185656798187,
+      "max_abs_lateral": 0.8742714177125902,
+      "distance_m": 202.90084524890398
+    },
+    {
+      "seed": 9011,
+      "steps": 89,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.6014032954070662,
+      "max_abs_lateral": 0.994028669351802,
+      "distance_m": 40.291627696167275
+    },
+    {
+      "seed": 9012,
+      "steps": 114,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.38202567281134453,
+      "max_abs_lateral": 0.6358572810764035,
+      "distance_m": 50.46290608520169
+    },
+    {
+      "seed": 9013,
+      "steps": 260,
+      "failure": "off_road",
+      "mean_abs_lateral": 1.1991360887446485,
+      "max_abs_lateral": 3.5442707767035757,
+      "distance_m": 106.14460653002607
+    },
+    {
+      "seed": 9014,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.4171213282008089,
+      "max_abs_lateral": 0.8474670234412065,
+      "distance_m": 203.15360999729782
+    },
+    {
+      "seed": 9015,
+      "steps": 435,
+      "failure": "obstacle",
+      "mean_abs_lateral": 1.15880453086283,
+      "max_abs_lateral": 2.246929154826544,
+      "distance_m": 175.7841128653142
+    },
+    {
+      "seed": 9016,
+      "steps": 456,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.43152891232413493,
+      "max_abs_lateral": 0.8551006777782215,
+      "distance_m": 186.67198151312442
+    },
+    {
+      "seed": 9017,
+      "steps": 500,
+      "failure": null,
+      "mean_abs_lateral": 0.21374856928756114,
+      "max_abs_lateral": 0.9922952830886128,
+      "distance_m": 204.9408012314788
+    },
+    {
+      "seed": 9018,
+      "steps": 236,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.37156007311909167,
+      "max_abs_lateral": 0.6594271110986927,
+      "distance_m": 98.97345849889926
+    },
+    {
+      "seed": 9019,
+      "steps": 100,
+      "failure": "obstacle",
+      "mean_abs_lateral": 0.6654614971024013,
+      "max_abs_lateral": 1.151022606777545,
+      "distance_m": 44.35004902031891
+    }
+  ]
+}

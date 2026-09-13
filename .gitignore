@@ -1,0 +1,19 @@
+# data, checkpoints and renders are not tracked: see README for how to get or make them
+data/
+runs/
+episodes/
+*.pt
+*.npz
+*.tar
+*.zip
+*.mp4
+*.png
+*.jpg
+render/assets/
+render/*/frames/
+render/*/composite/
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store

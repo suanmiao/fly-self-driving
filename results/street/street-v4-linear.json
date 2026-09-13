@@ -1,0 +1,72 @@
+{
+  "graph": "../flyhard/data/graph-traced-v1",
+  "out": "runs/street-v4-linear",
+  "model": "linear",
+  "hidden": 40,
+  "graph_mode": "measured",
+  "steps": 1200,
+  "batch": 4,
+  "window": 8,
+  "lr": 0.001,
+  "seed": 123,
+  "demo_roads": 60,
+  "demo_steps": 320,
+  "eval_roads": [
+    9000,
+    9019
+  ],
+  "eval_steps": 500,
+  "noise": 0.06,
+  "device": "cpu",
+  "task_version": 4,
+  "stateful": false,
+  "image": [
+    32,
+    64
+  ],
+  "train_roads": [
+    1000,
+    1059
+  ],
+  "teacher": "Lane-keeping pure pursuit with in-lane swerves around parked cars and left-lane overtakes of slow cars; noise-injected demonstrations.",
+  "claim": "Closed-loop driving in a ray-cast street scene with parked, oncoming and slow same-direction cars; not CARLA.",
+  "trainable_parameters": 2049,
+  "untrained": {
+    "episodes": 10,
+    "completed": 0,
+    "off_road": 8,
+    "parked_car": 1,
+    "oncoming_car": 0,
+    "traffic_car": 1,
+    "mean_abs_lateral_m": 0.9686974296213829,
+    "mean_distance_m": 33.88017098471114
+  },
+  "trained": {
+    "episodes": 20,
+    "completed": 1,
+    "off_road": 1,
+    "parked_car": 2,
+    "oncoming_car": 3,
+    "traffic_car": 13,
+    "mean_abs_lateral_m": 1.400271545038094,
+    "mean_distance_m": 86.18044491605667
+  },
+  "trained_no_obstacles": {
+    "episodes": 20,
+    "completed": 11,
+    "off_road": 9,
+    "parked_car": 0,
+    "oncoming_car": 0,
+    "traffic_car": 0,
+    "mean_abs_lateral_m": 1.2334212340620185,
+    "mean_distance_m": 157.4582056920666
+  },
+  "expert_reference": {
+    "completed": 20,
+    "episodes": 20
+  },
+  "first_loss": 0.028589164838194847,
+  "last_loss": 0.006220165640115738,
+  "training_seconds": 0.27485399995930493,
+  "wall_seconds": 154.70685616601259
+}

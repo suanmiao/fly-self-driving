@@ -1,0 +1,10 @@
+# Python 3.12. Versions are the ones the runs used; newer patch versions should be fine.
+torch==2.14.0
+numpy>=2.1
+pyarrow>=17
+imageio>=2.34
+imageio-ffmpeg>=0.5
+pillow>=10
+# flyhard (the original experiment) is a sibling checkout, not a pip dependency:
+#   git clone https://github.com/MarkUnthank/flyhard ../flyhard
+# Blender 4.2+ (5.x tested) for render/, ffmpeg on PATH for the video steps.

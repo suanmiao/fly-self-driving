@@ -1,0 +1,77 @@
+{
+  "graph": "../flyhard/data/graph-traced-v1",
+  "out": "runs/street-v4-measured-stateful",
+  "model": "connectome",
+  "hidden": 40,
+  "graph_mode": "measured",
+  "steps": 1200,
+  "batch": 4,
+  "window": 8,
+  "lr": 0.04,
+  "seed": 123,
+  "demo_roads": 60,
+  "demo_steps": 320,
+  "eval_roads": [
+    9000,
+    9019
+  ],
+  "eval_steps": 500,
+  "noise": 0.06,
+  "device": "mps",
+  "task_version": 4,
+  "stateful": true,
+  "image": [
+    32,
+    64
+  ],
+  "train_roads": [
+    1000,
+    1059
+  ],
+  "teacher": "Lane-keeping pure pursuit with in-lane swerves around parked cars and left-lane overtakes of slow cars; noise-injected demonstrations.",
+  "claim": "Closed-loop driving in a ray-cast street scene with parked, oncoming and slow same-direction cars; not CARLA.",
+  "graph_sha256": "eff4093bf53c4dd17d7ee4f2f838f6ae5ede70570f9a91317dd8824cca5c771d",
+  "neural_steps_per_decision": 4,
+  "state_reset": "episode start only",
+  "training": "truncated BPTT over windows of 8 decisions, batch 4 windows",
+  "interfaces": "Frozen random signed pixel->ol_sensory map and frozen random vnc_motor->steering readout; only edge gains and leaks train.",
+  "trainable_parameters": 25728319,
+  "untrained": {
+    "episodes": 10,
+    "completed": 0,
+    "off_road": 6,
+    "parked_car": 2,
+    "oncoming_car": 1,
+    "traffic_car": 1,
+    "mean_abs_lateral_m": 0.6573074804080314,
+    "mean_distance_m": 34.804508777685626
+  },
+  "trained": {
+    "episodes": 20,
+    "completed": 2,
+    "off_road": 1,
+    "parked_car": 0,
+    "oncoming_car": 3,
+    "traffic_car": 14,
+    "mean_abs_lateral_m": 1.417265721866888,
+    "mean_distance_m": 93.93441386738799
+  },
+  "trained_no_obstacles": {
+    "episodes": 20,
+    "completed": 19,
+    "off_road": 1,
+    "parked_car": 0,
+    "oncoming_car": 0,
+    "traffic_car": 0,
+    "mean_abs_lateral_m": 1.2660894419826423,
+    "mean_distance_m": 198.37362925613883
+  },
+  "expert_reference": {
+    "completed": 20,
+    "episodes": 20
+  },
+  "first_loss": 0.004656435921788216,
+  "last_loss": 0.004804607480764389,
+  "training_seconds": 5716.453803249868,
+  "wall_seconds": 6547.984946500044
+}
